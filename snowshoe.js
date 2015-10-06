@@ -44,7 +44,7 @@ opts.parse([
            }
 ]);
 
-var PORT = opts.get('port') || 3010;
+var PORT = opts.get('port') || 3001;
 var SESS = opts.get('sesstime')*60*1000 || 60*60*1000;
 
 //var app = module.exports = express.createServer();
@@ -58,7 +58,7 @@ var auth;
 
 var lcsAp = require(ROOTDIR + '/stdlibs/ap/lcsap').create('appServer', ROOTDIR, app);
 var lcsUI = require(ROOTDIR + '/stdlibs/ap/lcsui').create('appServer');
-var lcsDb = require(ROOTDIR + '/stdlibs/db/lcsdb').create('appServer', './etc/db.cf');
+var lcsDb = require(ROOTDIR + '/stdlibs/db/rcsdb').create('appServer', './etc/db.cf');
 var lcsSOCK = require(ROOTDIR + '/stdlibs/ap/lcssock').create('appServer');
 /* not use untill Sqlie3
 var lcsRdb = require(ROOTDIR + '/stdlibs/db/lcsrdb').create('appServer');
